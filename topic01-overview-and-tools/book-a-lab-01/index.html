@@ -161,7 +161,7 @@ h3
 <p><img src="img/firstrun.png" alt="Figure 1: Start a new Android Studio project"></p>
 <p>Press &quot;Next&quot; (or click the option) and then give the project a name: &#39;HelloWorld&#39;</p>
 <p>It&#39;s recommended you change the default package name also and it&#39;s probably worth changing the Project Location too but you can take the default for the moment.</p>
-<p><img src="../img/new01.png" alt="Figure 2: Change default project name to HelloWorld, provide a company domain and project location"></p>
+<p><img src="img/new01.png" alt="Figure 2: Change default project name to HelloWorld, provide a company domain and project location"></p>
 <p>Select the Platform(s) you want your app to run on - we&#39;ll just stick with Phone &amp; Tablet and choose an appropriate Minimum SDK.</p>
 <p><img src="img/new02.png" alt="Figure 3: Set the form factors"></p>
 <p>You should choose an Empty Activity as your activity type on the next screen</p>
@@ -199,11 +199,11 @@ h3
 <p>If you haven&#39;t deleted the project, you can just continue on.</p>
 <p>Name your package &#39;ie.wit&#39; (like you did before). Choose an Empty Activity again and rename as before. It&#39;s recommended you select <b>Android 5.0</b> as the launch target platform (but any target will suffice for this particular lab). It&#39;s also probably a good idea to run the App at this stage, so you can set up your Virtual Device (if you haven&#39;t done so already).</p>
 <p>Edit your &quot;strings.xml&quot; file (in your res folder) and add the following &quot;resources&quot; - be careful if you have created an app which contains a &#39;menu&#39; folder, this also includes associated resources, so don&#39;t overwrite those resources, just add our ones at the end.</p>
-<pre><code class="lang-xml">    &lt;string name=&quot;window_text&quot;&gt;Press the button below to receive a friendly greeting from Android.&lt;/string&gt;
+<pre><code>    &lt;string name=&quot;window_text&quot;&gt;Press the button below to receive a friendly greeting from Android.&lt;/string&gt;
     &lt;string name=&quot;button_label&quot;&gt;Show Greeting&lt;/string&gt;
     &lt;string name=&quot;greeting_text&quot;&gt;Hello from Android!&lt;/string&gt;</code></pre>
 <p>Your completed strings.xml (without menus) should look like this</p>
-<pre><code class="lang-xml">&lt;resources&gt;
+<pre><code>&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;HelloWorld&lt;/string&gt;
     &lt;string name=&quot;window_text&quot;&gt;Press the button below to receive a friendly greeting from Android.&lt;/string&gt;
     &lt;string name=&quot;button_label&quot;&gt;Show Greeting&lt;/string&gt;
@@ -211,8 +211,8 @@ h3
 &lt;/resources&gt;</code></pre>
 <p>If you choose &quot;open editor&quot; you can see the graphical representation of the String resources you have set up (and edit them here if you need to).</p>
 <p><img src="img/lab02.png" alt="Figure 1: String resources in Translations Editor"></p>
-<p>Now, edit your <b>&quot;activity_hello_world.xml&quot;</b> <u><i>in your <i><strong>layout</strong></i> folder</u> and replace your <b>TextView</b> with the following - make sure your in &#39;Text&#39; view and not &#39;Design&#39; view window.</p>
-<pre><code class="lang-xml">&lt;TextView
+<p>Now, edit your <b>&quot;activity_hello_world.xml&quot;</b> in your <u><i><strong>layout</strong></i> folder</u> and replace your <b>TextView</b> with the following - make sure your in &#39;Text&#39; view and not &#39;Design&#39; view window.</p>
+<pre><code>&lt;TextView
         android:id=&quot;@+id/textView1&quot;
         android:gravity=&quot;center&quot;
         android:layout_width=&quot;wrap_content&quot;
@@ -235,14 +235,14 @@ h3
 <p>Once again, it&#39;s worth running the app at this point to confirm everything is displayed the way we want it. If you click the button, your app will probably crash - we don&#39;t have our <b>showGreeting()</b> method implemented yet.</p>
 <p>So, the last thing we need to do is add in our event handling code so that a short message is displayed when the user presses the &#39;Show Greeting&#39; button.</p>
 <p>Firstly, open up the &quot;HelloWorldActivity.java&quot; source file and add the following method</p>
-<pre><code class="lang-java">public void showGreeting(View v) {
+<pre><code>public void showGreeting(View v) {
         // TODO Auto-generated method stub
         String greetingText = getString(R.string.greeting_text);
         Toast.makeText(this, greetingText, Toast.LENGTH_LONG).show();
     }</code></pre>
 <p>You&#39;ll get a few compiler errors due to missing imports, so try and fix those.</p>
 <p>Note that we have no need for some kind of Listener interface (ala swing development) - our event handling is taken care of via the &#39;onClick&#39; attribute in our xml layout, here&#39;s what your completed Activity class should look like.</p>
-<pre><code class="lang-java">package ie.wit.helloworld;
+<pre><code>package ie.wit.helloworld;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
