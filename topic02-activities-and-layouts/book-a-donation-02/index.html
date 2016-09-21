@@ -120,10 +120,6 @@ h3
         05
       </a>
     
-      <a class="item" data-tab=".">
-        .
-      </a>
-    
     </div>
 </div>
 
@@ -140,7 +136,7 @@ h3
     <h1>Package Name</h1>
 <p>This is the current version of the <b>Donation</b> app:</p>
 <ul>
-<li><a href="../archives/Donation.1.5.zip">Donation.1.5.zip</a></li>
+<li><a href="archives/Donation.1.5.zip">Donation.1.5.zip</a></li>
 </ul>
 <p>To continue using this project we need to &#39;refactor&#39; it to <b>Donation.2.0</b>. At the time of writing, Android Studio&#39;s refactoring features and tools are a bit iffy :-) so we&#39;ll need to manually copy our project.</p>
 <ol>
@@ -154,22 +150,22 @@ h3
 </ol>
 <p>We should also take this opportunity to change the name of the &#39;ie.app&#39; package to &#39;ie.app.activities&#39;, as we will be introducing other packages later on.</p>
 <p>So create a new Package (in the &#39;main&#39; folder)</p>
-<p><img src="../img/lab3s101.png" alt=""></p>
+<p><img src="img/lab3s101.png" alt=""></p>
 <p>and drag in your <b>Donate.java</b> into this new package. You can delete the empty package (if Android Studio hasn&#39;t done it already)</p>
 <p>Do the same for the <b>ApplicationTest</b> class.</p>
 <p>Next, check that the import statement in Donate.java is as follows:</p>
-<pre><code class="lang-java">import android.widget.Toast;
+<pre><code>import android.widget.Toast;
 
 import ie.app.R;
 
 public class Donate extends AppCompatActivity</code></pre>
-<p><img src="../img/lab3s102.png" alt=""></p>
+<p><img src="img/lab3s102.png" alt=""></p>
 <p>So make sure your project structure looks like the above before continuing.</p>
 <p>Also, don&#39;t forget to change the <b>app_name</b> string resource in your strings.xml.</p>
 <p>You should &#39;Clean&#39; your project at this stage &quot;Build-&gt;Clean Project&quot;, and then Rebuild &amp; finally run your app, to make sure everything is ok.</p>
 <p>This is the current version of the <b>Donation</b> app (Your Starter Code for this lab, after you&#39;ve completed the above):</p>
 <ul>
-<li><a href="../archives/Donation.2.0.Starter.zip">Donation.2.0.zip</a></li>
+<li><a href="archives/Donation.2.0.Starter.zip">Donation.2.0.zip</a></li>
 </ul>
 
   </div>
@@ -342,10 +338,6 @@ public class Report extends AppCompatActivity
 <li><a href="../archives/Donation.2.0.zip">Donation.2.0.zip</a></li>
 </ul>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab=".">
-    
   </div>
  
 
