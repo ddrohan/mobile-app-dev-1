@@ -116,8 +116,8 @@ h3
         04
       </a>
     
-      <a class="item" data-tab="05">
-        05
+      <a class="item" data-tab="Solution">
+        Solution
       </a>
     
     </div>
@@ -134,19 +134,19 @@ h3
  
   <div  class="ui tab segment lab" data-tab="01">
     <h1>Package Name</h1>
-<p>This is the current version of the <b>Donation</b> app:</p>
+<p>This is the version from the previous Lab of the <b>Donation</b> app:</p>
 <ul>
 <li><a href="archives/Donation.1.5.zip">Donation.1.5.zip</a></li>
 </ul>
-<p>To continue using this project we need to &#39;refactor&#39; it to <b>Donation.2.0</b>. At the time of writing, Android Studio&#39;s refactoring features and tools are a bit iffy :-) so we&#39;ll need to manually copy our project.</p>
+<p>and this is the current version of the <b>Donation</b> app (<strong>Your Starter Code for this lab</strong>)</p>
+<ul>
+<li><a href="archives/Donation.2.0.Starter.zip">Donation.2.0.zip</a></li>
+</ul>
+<p>I&#39;d recommend downloading the &#39;Starter Code&#39;, but if you wish to continue using your version (1.5) you would need to &#39;refactor&#39; it to <b>Donation.2.0</b>. At the time of writing, Android Studio&#39;s refactoring features and tools are still a bit iffy :-) but you could go ahead and</p>
 <ol>
-<li>Ensure you don&#39;t have <b>Donation.1.5</b> open in Android Studio - if you do, close it now</li>
-<li>Navigate to the folder where you downloaded and unzipped <b>Donation.1.5</b></li>
-<li>Rename (or copy if you wish) the folder to <b>Donation.2.0</b></li>
-<li>Rename the file <b>Donation.1.5.iml</b> to <b><i>Donation.2.0.iml</i></b></li>
-<li>Edit <b><i>Donation.2.0.iml</i></b> and change any references to <b>Donation.1.5</b> to <b>Donation.2.0</b></li>
-<li>Navigate to the <b>.idea</b> folder (it might be a hidden folder) open the <b>.name</b> file and rename the project name to <b>Donation.2.0</b></li>
-<li>Launch Android Studio and open up the <b>Donation.2.0</b> project</li>
+<li>Close the current project</li>
+<li>Copy and rename the Donation.1.5 folder to Donation.2.0</li>
+<li>Open the Project Donation.2.0 in Android Studio</li>
 </ol>
 <p>We should also take this opportunity to change the name of the &#39;ie.app&#39; package to &#39;ie.app.activities&#39;, as we will be introducing other packages later on.</p>
 <p>So create a new Package (in the &#39;main&#39; folder)</p>
@@ -162,16 +162,12 @@ public class Donate extends AppCompatActivity</code></pre>
 <p><img src="img/lab3s102.png" alt=""></p>
 <p>So make sure your project structure looks like the above before continuing.</p>
 <p>Also, don&#39;t forget to change the <b>app_name</b> string resource in your strings.xml.</p>
-<p>You should &#39;Clean&#39; your project at this stage &quot;Build-&gt;Clean Project&quot;, and then Rebuild &amp; finally run your app, to make sure everything is ok.</p>
-<p>This is the current version of the <b>Donation</b> app (Your Starter Code for this lab, after you&#39;ve completed the above):</p>
-<ul>
-<li><a href="archives/Donation.2.0.Starter.zip">Donation.2.0.zip</a></li>
-</ul>
+<p>Whether you&#39;ve downloaded the Starter App or continued on with you own app, you should still &#39;Clean&#39; your project at this stage &quot;Build-&gt;Clean Project&quot;, and then Rebuild &amp; finally run your app, to make sure everything is ok.</p>
 
   </div>
  
   <div  class="ui tab segment lab" data-tab="02">
-    <h1>Menu</h1>
+    <h1>Working with Menus</h1>
 <p>Open <b>res/values/strings.xml</b> and introduce a new String resource like this:</p>
 <pre><code class="lang-xml">&lt;string name=&quot;menuReport&quot;&gt;Report&lt;/string&gt;</code></pre>
 <p>We have a menu resource called &#39;menu_donate.xml&#39; in the res/menu folder. Modify this file by adding this new menu item:</p>
@@ -181,7 +177,7 @@ public class Donate extends AppCompatActivity</code></pre>
         android:title=&quot;@string/menuReport&quot;
         app:showAsAction=&quot;never&quot;/&gt;</code></pre>
 <p>(Make sure it is within the <b>&#39;menu&#39;</b> element)</p>
-<p>In Donate.java, change the onOptionsItemSelected method to look like this:</p>
+<p>In <strong>Donate.java</strong>, change the <em>onOptionsItemSelected()</em> method to look like this:</p>
 <pre><code class="lang-java">  @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
@@ -191,27 +187,26 @@ public class Donate extends AppCompatActivity</code></pre>
                 toast.show();
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }</code></pre>
 <p>Run the app and when you press the menu button (or the overflow menu) and select &#39;Report&#39;, you should see the toast message appear.</p>
-<p><img src="../img/lab3s103.png" alt=""><img src="../img/lab3s104.png" alt=""></p>
+<p><img src="img/lab3s103.png" alt=""><img src="img/lab3s104.png" alt=""></p>
 
   </div>
  
   <div  class="ui tab segment lab" data-tab="03">
     <h1>Reports Activity</h1>
-<p>Before we start to design a new activity, Add a string resource in res/values/strings.xml:</p>
+<p>Before we start to design a new activity, Add a string resource in <strong>res/values/strings.xml</strong>:</p>
 <pre><code class="lang-xml">&lt;string name=&quot;reportTitle&quot;&gt;Report&lt;/string&gt;</code></pre>
-<p>Design a new layout called <b>activity_report</b>. Do this by locating the res/layout folder and selecting new-&gt;layout resource file:</p>
-<p><img src="../img/lab3s301.png" alt=""></p>
+<p>Design a new layout called <b>activity_report</b>. Do this by locating the <em>res/layout</em> folder and selecting New-&gt;Layout resource file, like so:</p>
+<p><img src="img/lab3s301.png" alt=""></p>
 <p>You can choose all the defaults for this layout.</p>
-<p><img src="../img/lab3s302.png" alt=""></p>
+<p><img src="img/lab3s302.png" alt=""></p>
 <p>&#39;Morph&#39; our layout from Linear to Relative, like so,</p>
-<p><img src="../img/lab3s303.png" alt=""></p>
+<p><img src="img/lab3s303.png" alt=""></p>
 <p>and build a layout similar to the following:</p>
-<p><img src="../img/lab3s304.png" alt=""></p>
-<p>This is the layout file itself:</p>
+<p><img src="img/lab3s304.png" alt=""></p>
+<p>This is the layout file itself, if you want to overwrite the xml:</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     android:orientation=&quot;vertical&quot; android:layout_width=&quot;match_parent&quot;
@@ -236,8 +231,8 @@ public class Donate extends AppCompatActivity</code></pre>
         android:layout_below=&quot;@+id/reportTitle&quot;
         android:layout_alignParentStart=&quot;true&quot; /&gt;
 &lt;/RelativeLayout&gt;</code></pre>
-<p>Introduce a new Empty Activity into ie.app.activities to render this activity:</p>
-<p><img src="../img/lab3s305.png" alt=""></p>
+<p>Introduce a new Empty Activity into <strong>ie.app.activities</strong> to render this activity - but be careful <strong>NOT</strong> to &#39;<em>Generate Layout File</em>&#39; (as we have one already):</p>
+<p><img src="img/lab3s305.png" alt=""></p>
 <p>and replace it with the following:</p>
 <pre><code class="lang-java">package ie.app.activities;
 
@@ -253,7 +248,7 @@ public class Report extends AppCompatActivity
 {
   ListView listView;
 
-  static final String[] numbers = new String[] { 
+  static final String[] numbers = new String[] {
       &quot;Amount, Pay method&quot;,
       &quot;10,     Direct&quot;,
       &quot;100,    PayPal&quot;,
@@ -262,18 +257,18 @@ public class Report extends AppCompatActivity
       &quot;5000,   PayPal&quot;};
 
   @Override
-  public void onCreate(Bundle savedInstanceState) 
+  public void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_report);
 
     listView = (ListView) findViewById(R.id.reportList);
-    ArrayAdapter&lt;String&gt; adapter = new ArrayAdapter&lt;String&gt;(this,  android.R.layout.simple_list_item_1, numbers); 
+    ArrayAdapter&lt;String&gt; adapter = new ArrayAdapter&lt;String&gt;(this,  android.R.layout.simple_list_item_1, numbers);
     listView.setAdapter(adapter);
   }
 }</code></pre>
-<p>This will display a hard-coded lists of donations.</p>
-<p>Change Donation activity to load this view when &#39;Report&#39; selected from menu:</p>
+<p>This will display a hard-coded lists of donations on the &#39;Screen&#39;.</p>
+<p>Change Donation activity to load this view when &#39;Report&#39; is selected from menu:</p>
 <pre><code class="lang-java">  @Override
   public boolean onOptionsItemSelected(MenuItem item)
   {
@@ -310,32 +305,32 @@ public class Report extends AppCompatActivity
     &lt;/application&gt;
 
 &lt;/manifest&gt;</code></pre>
-<p>Try it all now - it should load (like below)</p>
-<p><img src="../img/lab3s306.png" alt=""></p>
+<p>Try it all now - it should load up (like below)</p>
+<p><img src="img/lab3s306.png" alt=""></p>
 
   </div>
  
   <div  class="ui tab segment lab" data-tab="04">
-    <h1>Menu Revisited</h1>
-<p>When you navigate from the Donate activity to reports, there will be no menu available. So we need to first inflate the menu like so</p>
+    <h1>Our Menu Revisited</h1>
+<p>When you navigate from the <strong>Donate</strong> activity to <strong>Report</strong>, there will be no menu available. So we need to first <em>inflate</em> the menu by introducing the following method into the <strong>Report</strong> activity, like so</p>
 <pre><code class="lang-java">@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_donate, menu);
         return true;
     }</code></pre>
-<p>Bring in a new menu item, &#39;Donate&#39; - Donate should bring you back to the main Donate Screen.</p>
-<p>This is a very similar approach to what you did in Step 02, so revisit this step and see if you can end up with something like the following for the &#39;Report&#39; Screen:</p>
-<p><img src="../img/lab3s401.png" alt=""></p>
+<p>Bring in a new menu item, &#39;<em>Donate</em>&#39; - Donate should bring you back to the main <strong>Donate</strong> Screen.</p>
+<p>This is a very similar approach to what you did in Step 02, so revisit this step and see if you can end up with something like the following for the <strong>Report</strong> Screen:</p>
+<p><img src="img/lab3s401.png" alt=""></p>
 <p>We&#39;ll look at populating the list with actual donations in the next lab.</p>
 
   </div>
  
-  <div  class="ui tab segment lab" data-tab="05">
+  <div  class="ui tab segment lab" data-tab="Solution">
     <h1>Solution</h1>
 <p>Solution so far:</p>
 <ul>
-<li><a href="../archives/Donation.2.0.zip">Donation.2.0.zip</a></li>
+<li><a href="archives/Donation.2.0.zip">Donation.2.0.zip</a></li>
 </ul>
 
   </div>
