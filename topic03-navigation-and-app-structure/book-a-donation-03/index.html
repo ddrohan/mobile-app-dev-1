@@ -120,8 +120,8 @@ h3
         05
       </a>
     
-      <a class="item" data-tab="06">
-        06
+      <a class="item" data-tab="Exercise">
+        Exercise
       </a>
     
     </div>
@@ -138,9 +138,9 @@ h3
  
   <div  class="ui tab segment lab" data-tab="01">
     <h1>Donation Model &amp; Base Class</h1>
-<p>In order to keep our application design coherent, we now bring in an Base class and a Donation class to manage our Donations. You can continue with your own version of the app or start with the solution from the previous lab - <a href="../archives/Donation.2.0.zip">Donation.2.0</a></p>
-<p>But before we do anything, it&#39;s probably a good idea to rename/copy or project to <b>Donation.3.0</b> like we did in the previous lab - so go ahead and do that now (just make sure it&#39;s not open Android Studio!)</p>
-<p>Now, first, create a new package called &#39;ie.app.models&#39; in &#39;main&#39; and bring in this class here:</p>
+<p>In order to keep our application design coherent, we now bring in an <strong>Base</strong> class and a <strong>Donation</strong> class to manage our Donations. You can continue with your own version of the app or start with the solution from the previous lab - <a href="../archives/Donation.2.0.zip">Donation.2.0</a></p>
+<p>But before we do anything, it&#39;s probably a good idea to rename/copy or project to <b>Donation.3.0</b> like we did in the previous lab - so go ahead and do that now (just make sure it&#39;s not open in Android Studio!)</p>
+<p>Now, first, create a new package called <strong>ie.app.models</strong> in &#39;main&#39; and bring in this class here:</p>
 <pre><code class="lang-java">package ie.app.models;
 
 public class Donation
@@ -154,12 +154,12 @@ public class Donation
     this.method = method;
   }
 }</code></pre>
-<p>Next, Create a new class called &#39;Base&#39; and add it to the &#39;ie.app.activities&#39; package: (and fix the errors obviously :-) )</p>
+<p>Next, Create a new class called &#39;Base&#39; and add it to the <strong>ie.app.activities</strong> package: (and fix the errors obviously :-) )</p>
 <pre><code class="lang-java">public class Base extends AppCompatActivity
 {
-  public final int       target       = 10000;
-  public int             totalDonated = 0;
-  public static List &lt;Donation&gt; donations    = new ArrayList&lt;Donation&gt;();
+  public final  int            target       = 10000;
+  public        int            totalDonated = 0;
+  public static List&lt;Donation&gt; donations    = new ArrayList&lt;Donation&gt;();
 
   public boolean newDonation(Donation donation)
   {
@@ -169,10 +169,8 @@ public class Donation
       donations.add(donation);
       totalDonated += donation.amount;
     }
-    else
-    {
-      Toast toast = Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT);
-      toast.show();
+    else {
+      Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT).show();
     }
     return targetAchieved;
   }
@@ -193,7 +191,7 @@ public class Donation
       if(donations.isEmpty())     
            report.setEnabled(false);
       else
-        report.setEnabled(true); 
+        report.setEnabled(true);
 
       if(this instanceof Donate){
           donate.setVisible(false);
@@ -227,14 +225,14 @@ public class Donation
 <p>There is still one error remaining, can you work out why, and more importantly, how to fix it?</p>
 <p>Hint - it relates to class inheritance, and some refactoring that needs to be done.</p>
 <p>Your project should now look as follows:</p>
-<p><img src="../img/lab4s101.png" alt=""></p>
+<p><img src="img/lab4s101.png" alt=""></p>
 <p>Also, pay particular attention to the &#39;settings&#39;, &#39;report&#39; and &#39;donate&#39; methods - these will be triggered directly by our menu options via xml, which we&#39;ll look at in Step 05.</p>
 
   </div>
  
   <div  class="ui tab segment lab" data-tab="02">
     <h1>Refactored Donate</h1>
-<p>The Donate activity can now be completely refactored to make use of the Base class.</p>
+<p>The <strong>Donate</strong> activity can now be completely refactored to make use of the <strong>Base</strong> class.</p>
 <pre><code class="lang-java">public class Donate extends Base {
 
     private Button          donateButton;
@@ -318,8 +316,8 @@ public class Donation
  
   <div  class="ui tab segment lab" data-tab="03">
     <h1>Refactored Report - New &#39;Layout&#39;</h1>
-<p>We now rework Report to render the actual donations - held in the Base class list.</p>
-<p>First some layout additions. Include these new string resources in strings.xml</p>
+<p>We now rework the <strong>Report</strong> Layout to render the actual donations - held in the <strong>Base</strong> class list.</p>
+<p>First some layout additions. Include these new string resources in <strong>strings.xml</strong></p>
 <pre><code class="lang-xml">    &lt;string name=&quot;defaultAmount&quot;&gt;00&lt;/string&gt;
     &lt;string name=&quot;defaultMethod&quot;&gt;N/A&lt;/string&gt;</code></pre>
 <p>This is a new layout - to be called &#39;row_donate.xml&#39;. Place this in the &#39;layout&#39; folder.</p>
@@ -353,7 +351,7 @@ public class Donation
  
   <div  class="ui tab segment lab" data-tab="04">
     <h1>Refactored Report - New &#39;Class&#39;</h1>
-<p>Finally, rework the Report class to remove the hard coded values - and use a different &#39;adapter&#39;</p>
+<p>Finally, rework the <strong>Report</strong> class to remove the hard coded values - and use a different &#39;<strong>adapter</strong>&#39;</p>
 <pre><code class="lang-java">public class Report extends Base
 {
     ListView listView;
@@ -387,7 +385,7 @@ public class Donation
         return super.onOptionsItemSelected(item);
     }
 }</code></pre>
-<p>This is the new adapter - DonationAdapter. You can place this at the end of the Report class (outside the closing brace) if you like:</p>
+<p>This is the new adapter - <strong>DonationAdapter</strong>. You can place this at the end of the <strong>Report</strong> class (outside of the closing brace) if you like:</p>
 <pre><code class="lang-java">class DonationAdapter extends ArrayAdapter&lt;Donation&gt;
 {
   private Context        context;
@@ -422,14 +420,14 @@ public class Donation
     return donations.size();
   }
 }</code></pre>
-<p>If all goes well - then you should be able to make donations, and then see a list of them in the report activity.</p>
-<p><img src="../img/lab4s401.png" alt=""> <img src="../img/lab4s402.png" alt=""></p>
+<p>If all goes well - then you should be able to make donations, and then see a list of them in the <strong>Report</strong> activity.</p>
+<p><img src="img/lab4s401.png" alt=""> <img src="img/lab4s402.png" alt=""></p>
 
   </div>
  
   <div  class="ui tab segment lab" data-tab="05">
     <h1>Refactored Menu - New &#39;Event Handling&#39;</h1>
-<p>If you recall from Step 01, our Base class has 3 particular methods that we haven&#39;t made use of - yet</p>
+<p>If you recall from Step 01, our <strong>Base</strong> class has 3 particular methods that we haven&#39;t made use of - yet</p>
 <pre><code class="lang-java">  public void settings(MenuItem item)
   {
     Toast.makeText(this, &quot;Settings Selected&quot;, Toast.LENGTH_SHORT).show();
@@ -445,8 +443,8 @@ public class Donation
     startActivity (new Intent(this, Donate.class));
   }
 }</code></pre>
-<p>We will now use these methods, and using the <b>onClick</b> attribute in our MenuItems, we will &#39;bind&#39; these methods to our menu options.</p>
-<p>Firstly, edit your menu_donate.xml and ensure it now looks as follows: </p>
+<p>We will now use these methods, and using the <b>onClick</b> attribute in our <em>MenuItems</em>, we will &#39;bind&#39; these methods to our menu options.</p>
+<p>Firstly, edit your <strong>menu_donate.xml</strong> and ensure it now looks as follows:</p>
 <pre><code class="lang-xml">&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot; tools:context=&quot;.Donate&quot;&gt;
@@ -471,8 +469,8 @@ public class Donation
         app:showAsAction=&quot;never&quot;
         android:onClick=&quot;donate&quot;/&gt;
 &lt;/menu&gt;</code></pre>
-<p><b>note the added onClick attributes for each MenuItem, it directly corresponds to the method names in our Base class </b></p>
-<p>We can now refactor our Donate &amp; Report classes and <b>Remove</b> the menu inflation and event handling code in both classes.</p>
+<p><b>note the added <strong>onClick</strong> attributes for each <em>MenuItem</em>, it directly corresponds to the method names in our <strong>Base</strong> class </b></p>
+<p>We can now refactor our <strong>Donate</strong> &amp; <strong>Report</strong> classes and <strong><em>Remove</em></strong> the menu inflation and event handling code in both classes.</p>
 <p>So, both classes should look as follows:</p>
 <p><b>Donate</b></p>
 <pre><code class="lang-java">public class Donate extends Base {
@@ -553,7 +551,7 @@ public class Donation
 
   </div>
  
-  <div  class="ui tab segment lab" data-tab="06">
+  <div  class="ui tab segment lab" data-tab="Exercise">
     <h1>Exercise &amp; Solution</h1>
 <p>As a final exercise, try and add some event handling to the Report Activity - i.e. when the user selects a row in Report List, display a simple toast detailing which row was selected and the donation data from that row.</p>
 <p>Something like this:</p>
