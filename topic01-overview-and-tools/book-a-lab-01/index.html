@@ -195,7 +195,7 @@ h3
     <h1>Our version of &quot;HelloWorld&quot;</h1>
 <p>In this Step, you will be required to develop and run your own version of the &quot;Hello World&quot; Android Project (as seen below).</p>
 <p><img src="img/lab01.png" alt="Figure 1: Completed App running in Emulator"></p>
-<p>If you&#39;ve deleted your HelloWorld Project, launch Android Studio (if it&#39;s not already open) and create a new Android Project called <b>HelloWorld</b> similar to what you did in Step 02. </p>
+<p>If you&#39;ve deleted your HelloWorld Project, launch Android Studio (if it&#39;s not already open) and create a new Android Project called <b>HelloWorld</b> similar to what you did in Step 02.</p>
 <p>If you haven&#39;t deleted the project, you can just continue on.</p>
 <p>Name your package &#39;ie.wit&#39; (like you did before). Choose an Empty Activity again and rename as before. It&#39;s recommended you select <b>Android 5.0</b> as the launch target platform (but any target will suffice for this particular lab). It&#39;s also probably a good idea to run the App at this stage, so you can set up your Virtual Device (if you haven&#39;t done so already).</p>
 <p>Edit your &quot;strings.xml&quot; file (in your res folder) and add the following &quot;resources&quot; - be careful if you have created an app which contains a &#39;menu&#39; folder, this also includes associated resources, so don&#39;t overwrite those resources, just add our ones at the end.</p>
@@ -211,7 +211,7 @@ h3
 &lt;/resources&gt;</code></pre>
 <p>If you choose &quot;open editor&quot; you can see the graphical representation of the String resources you have set up (and edit them here if you need to).</p>
 <p><img src="img/lab02.png" alt="Figure 1: String resources in Translations Editor"></p>
-<p>Now, edit your <b>&quot;activity_hello_world.xml&quot;</b> in your <u><i><strong>layout</strong></i> folder</u> and replace your <b>TextView</b> with the following - make sure your in &#39;Text&#39; view and not &#39;Design&#39; view window.</p>
+<p>Now, edit your <b>&quot;activity_hello_world.xml&quot;</b> in your <u><i><strong>layout</strong></i></u> folder and replace your <b>TextView</b> with the following - make sure your in &#39;Text&#39; view and not &#39;Design&#39; view window (so you can see the xml).</p>
 <pre><code>&lt;TextView
         android:id=&quot;@+id/textView1&quot;
         android:gravity=&quot;center&quot;
@@ -230,18 +230,17 @@ h3
         android:layout_marginBottom=&quot;59dp&quot;
         android:onClick=&quot;showGreeting&quot;
         android:text=&quot;@string/button_label&quot; /&gt;</code></pre>
-<p>This will give you the following layout:</p>
+<p>This will give you the following layout (once you select &#39;Design View&#39; again):</p>
 <p><img src="img/lab03.png" alt="Figure 3: Updated Activity Layout with TextView and Button widgets"></p>
 <p>Once again, it&#39;s worth running the app at this point to confirm everything is displayed the way we want it. If you click the button, your app will probably crash - we don&#39;t have our <b>showGreeting()</b> method implemented yet.</p>
 <p>So, the last thing we need to do is add in our event handling code so that a short message is displayed when the user presses the &#39;Show Greeting&#39; button.</p>
-<p>Firstly, open up the &quot;HelloWorldActivity.java&quot; source file and add the following method</p>
+<p>Firstly, open up the <strong>HelloWorldActivity.java</strong> source file and add the following method</p>
 <pre><code>public void showGreeting(View v) {
-        // TODO Auto-generated method stub
         String greetingText = getString(R.string.greeting_text);
         Toast.makeText(this, greetingText, Toast.LENGTH_LONG).show();
     }</code></pre>
 <p>You&#39;ll get a few compiler errors due to missing imports, so try and fix those.</p>
-<p>Note that we have no need for some kind of Listener interface (ala swing development) - our event handling is taken care of via the &#39;onClick&#39; attribute in our xml layout, here&#39;s what your completed Activity class should look like.</p>
+<p>Note that we have no need for some kind of Listener interface (ala swing development) - our event handling is taken care of via the <strong><em>onClick</em></strong> attribute in our xml layout, here&#39;s what your completed <strong>HelloWorldActivity</strong> class should look like.</p>
 <pre><code>package ie.wit.helloworld;
 
 import android.os.Bundle;
@@ -270,10 +269,10 @@ public class HelloWorldActivity extends AppCompatActivity {
  
   <div  class="ui tab segment lab" data-tab="04">
     <h1>Exercises</h1>
-<h2>Working with Resources</h2>
+<h3>Working with Resources</h3>
 <p>Just to get used to adding and editing resources, create a new button for our main layout, and try and &#39;hook it up&#39; to a new string resource message to display to the user.</p>
-<h2>UI Design</h2>
-<p>Have a look at adding in a new colour resource and changing the default background colour for the layout.  </p>
+<h3>UI Design</h3>
+<p>Have a look at adding in a new colour resource and changing the default colour scheme for the layout.  </p>
 
   </div>
  
