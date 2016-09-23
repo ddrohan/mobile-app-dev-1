@@ -175,7 +175,7 @@ h3
   </div>
  
   <div  class="ui tab segment lab" data-tab="02">
-    <h1>Step 02 - Layout Donation Activity</h1>
+    <h1>Step 02 - Donate Layout &amp; Resources</h1>
 <p>On completion of this lab you&#39;ll be able to</p>
 <ul>
 <li><p>design an initial layout for the app.</p>
@@ -205,7 +205,7 @@ h3
 <p><img src="img/lab2s206.png" alt=""></p>
 <p>Note carefully the following features:</p>
 <ul>
-<li>the guides tyeing the text to the left, top and right corner</li>
+<li>the guides tying the text to the left, top and right corner</li>
 <li>in Outline - the name of the control has been changed from a default to &#39;donateTitle&#39;.</li>
 <li>in Properties - check the value for &#39;text&#39; and notice we have a string reference linking to our <b>strings.xml</b> (below)</li>
 </ul>
@@ -243,6 +243,7 @@ h3
 <p>Bring in the following string into the donate activity now - (medium text) - and follow the same procedure as above. The designer should look like this:</p>
 <p><img src="img/lab2s208.png" alt=""></p>
 <p>and our XML files will look something like this:</p>
+<p><strong>content_dontate.xml</strong></p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -275,7 +276,7 @@ h3
         android:layout_marginTop=&quot;27dp&quot;
         android:layout_alignEnd=&quot;@+id/donateTitle&quot; /&gt;
 &lt;/RelativeLayout&gt;</code></pre>
-<p>Our &#39;strings.xml&#39; file....</p>
+<p>and our <strong>strings.xml</strong> file....</p>
 <pre><code>&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
@@ -290,7 +291,7 @@ h3
 <p>Place a button directly on to the activity - attached to the bottom of the screen as shown:</p>
 <p><img src="img/lab2s301.png" alt=""></p>
 <p>Following a similar procedure as in the previous step, rename the button and add an id, both called <b>donateButton</b> If all goes as expected, your xml files should be like this:</p>
-<h3>activity_donate.xml</h3>
+<h2>activity_donate.xml</h2>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -332,6 +333,7 @@ h3
         android:layout_centerHorizontal=&quot;true&quot;
         android:layout_marginBottom=&quot;47dp&quot; /&gt;
 &lt;/RelativeLayout&gt;</code></pre>
+<h1>#</h1>
 <h2>strings.xml</h2>
 <pre><code>&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
@@ -340,6 +342,7 @@ h3
     &lt;string name=&quot;donateSubtitle&quot;&gt;Please Give Generously&lt;/string&gt;
     &lt;string name=&quot;donateButton&quot;&gt;Donate&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
+<h2>#</h2>
 <p>If there is a deviation from the above - retrace your steps (delete the button) until you can match the above.</p>
 <p>We can now switch our attention to the Java Activity class Donate:</p>
 <pre><code>package ie.app;
