@@ -243,7 +243,7 @@ h3
 <p>Bring in the following string into the donate activity now - (medium text) - and follow the same procedure as above. The designer should look like this:</p>
 <p><img src="img/lab2s208.png" alt=""></p>
 <p>and our XML files will look something like this:</p>
-<p><strong>content_dontate.xml</strong></p>
+<h2>content_dontate.xml</h2>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -276,7 +276,7 @@ h3
         android:layout_marginTop=&quot;27dp&quot;
         android:layout_alignEnd=&quot;@+id/donateTitle&quot; /&gt;
 &lt;/RelativeLayout&gt;</code></pre>
-<p>and our <strong>strings.xml</strong> file....</p>
+<h2>strings.xml</h2>
 <pre><code>&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
@@ -333,7 +333,6 @@ h3
         android:layout_centerHorizontal=&quot;true&quot;
         android:layout_marginBottom=&quot;47dp&quot; /&gt;
 &lt;/RelativeLayout&gt;</code></pre>
-<h1>#</h1>
 <h2>strings.xml</h2>
 <pre><code>&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
@@ -342,9 +341,8 @@ h3
     &lt;string name=&quot;donateSubtitle&quot;&gt;Please Give Generously&lt;/string&gt;
     &lt;string name=&quot;donateButton&quot;&gt;Donate&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
-<h2>#</h2>
 <p>If there is a deviation from the above - retrace your steps (delete the button) until you can match the above.</p>
-<p>We can now switch our attention to the Java Activity class Donate:</p>
+<p>We can now switch our attention to the <strong>Donate</strong> Activity class :</p>
 <pre><code>package ie.app;
 
 import android.os.Bundle;
@@ -404,7 +402,7 @@ public class Donate extends AppCompatActivity {
 <p><img src="img/lab2s302.png" alt=""></p>
 <p>We are free to call the variable anything we like. However, in order to keep confusion to a minimum, always call the variable by the same name you used in the Outline view:</p>
 <p><img src="img/lab2s303.png" alt=""></p>
-<p>In onCreate - we need to initialise this variable:</p>
+<p>In <strong><em>onCreate()</em></strong> - we need to initialise this variable:</p>
 <pre><code>    donateButton = (Button) findViewById(R.id.donateButton);</code></pre>
 <p>We might also add a logging message so we can have some feedback as the app launches:</p>
 <pre><code>    if (donateButton != null)
@@ -495,19 +493,19 @@ public class Donate extends AppCompatActivity {
 </ul>
 <p>The first is designed to be read though as a guide, perhaps independent of any work in Android Studio. You should get into the habit of devoting an hour or two a week just reading this section.</p>
 <p>The Reference guide should always be open as you are working on labs or projects, and you should make a serious effort to get to grips with at least some of the information here.</p>
-<p>Taking the Button class we have just started using. We can immediately find the reference just by knowing the import statement in our Activity class:</p>
+<p>Taking the <strong>Button</strong> class we have just started using. We can immediately find the reference just by knowing the import statement in our Activity class:</p>
 <pre><code>import android.widget.Button;</code></pre>
 <p>.. translates to</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/Button.html">http://developer.android.com/reference/android/widget/Button.html</a></li>
 </ul>
 <p>(note the last three segments match the package name). Open this page now. Read just as far as the &quot;Button Style&quot; heading. There seems to be two ways of learning when an button event occurs. The first method is using the event handler/listener - but a second easier method is also available.</p>
-<p>Try this now. Bring in a new method into Donate class:</p>
+<p>Try this now. Bring in a new method into the <strong>Donate</strong> class:</p>
 <pre><code>  public void donateButtonPressed (View view)
   {
     Log.v(&quot;Donate&quot;, &quot;Donate Pressed!&quot;);
    }</code></pre>
-<p>Then, edit the <b>content_donate.xml</b> file - and add a new &#39;onClick&#39; attribute into the Button xml fragment:</p>
+<p>Then, edit the <b>content_donate.xml</b> file - and add a new &#39;onClick&#39; <em>attribute</em> into the Button xml fragment:</p>
 <p>(the very last entry)</p>
 <pre><code>    &lt;Button
         android:layout_width=&quot;wrap_content&quot;
@@ -532,7 +530,7 @@ public class Donate extends AppCompatActivity {
 <p><img src="img/lab2s107.png" alt="">
 <img src="img/lab2s501.png" alt="">
 <img src="img/lab2s502.png" alt=""></p>
-<p>RadioGroup, ProgressBar and NumberPicker seem likely candidates. The names of these controls are exactly as advertised, and we can expect them to be in the &#39;widgets&#39; package. To verify this, try importing them at the top of the Donate activity class:</p>
+<p>RadioGroup, ProgressBar and NumberPicker seem likely candidates. The names of these controls are exactly as advertised, and we can expect them to be in the &#39;widgets&#39; package. To verify this, try importing them at the top of the <strong>Donate</strong> activity class:</p>
 <pre><code>import android.widget.RadioGroup;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;</code></pre>
@@ -552,6 +550,7 @@ import android.widget.ProgressBar;</code></pre>
 <p><img src="img/lab2s504.png" alt=""></p>
 <p>Getting the layout +id names as shown above may take some practice. However, it is an essential skill to get on top of, even it it takes a lot of trial and error.</p>
 <p>For reference purposes (try to do it yourself first!), these are the relevant generated xml files:</p>
+<h2>content_donate.xml</h2>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -635,6 +634,7 @@ import android.widget.ProgressBar;</code></pre>
         android:layout_above=&quot;@+id/donateButton&quot;
         android:indeterminate=&quot;false&quot; /&gt;
 &lt;/RelativeLayout&gt;</code></pre>
+<h2>strings.xml</h2>
 <pre><code>&lt;resources&gt;
     &lt;string name=&quot;app_name&quot;&gt;Donation.1.0&lt;/string&gt;
     &lt;string name=&quot;action_settings&quot;&gt;Settings&lt;/string&gt;
@@ -644,11 +644,11 @@ import android.widget.ProgressBar;</code></pre>
     &lt;string name=&quot;paypal&quot;&gt;PayPal&lt;/string&gt;
     &lt;string name=&quot;direct&quot;&gt;Direct&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
-<p>If we have our naming conventions right - then we can bind to these new controls in onCreate:</p>
+<p>If we have our naming conventions right - then we can bind to these new controls in <strong><em>onCreate()</em></strong>:</p>
 <pre><code>    paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
     progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
     amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);</code></pre>
-<p>This is the complete Donate class so far:</p>
+<p>This is the complete <strong>Donate</strong> class so far:</p>
 <pre><code>package ie.app;
 
 import android.os.Bundle;
@@ -758,10 +758,10 @@ public class Donate extends AppCompatActivity {
 <li><a href="http://developer.android.com/reference/android/widget/NumberPicker.html#setMinValue(int)">http://developer.android.com/reference/android/widget/NumberPicker.html#setMinValue(int)</a></li>
 <li><a href="http://developer.android.com/reference/android/widget/NumberPicker.html#getValue()">http://developer.android.com/reference/android/widget/NumberPicker.html#getValue()</a></li>
 </ul>
-<p>In onCreate, initialise the values:</p>
+<p>In <strong><em>onCreate()</em></strong>, initialise the values:</p>
 <pre><code>    amountPicker.setMinValue(0);
     amountPicker.setMaxValue(1000);</code></pre>
-<p>And in donateButtonPressed:</p>
+<p>And in <strong><em>donateButtonPressed()</em></strong>:</p>
 <pre><code>  public void donateButtonPressed (View view)
   {
     int amount = amountPicker.getValue();
@@ -774,7 +774,7 @@ public class Donate extends AppCompatActivity {
  
   <div  class="ui tab segment lab" data-tab="07">
     <h1>Step 07 - The Radio Buttons</h1>
-<p>In <i>donateButtonPressed()</i> we need to discover which payment method has been selected. Our RadioGroup documentation is here:</p>
+<p>In <strong><em>donateButtonPressed()</em></strong> we need to discover which payment method has been selected. Our RadioGroup documentation is here:</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/RadioGroup.html">http://developer.android.com/reference/android/widget/RadioGroup.html</a></li>
 </ul>
@@ -782,7 +782,7 @@ public class Donate extends AppCompatActivity {
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/RadioGroup.html#getCheckedRadioButtonId(">getCheckedRadioButtonId()</a>)</li>
 </ul>
-<p>This is a revised version of <i>donateButtonPressed()</i></p>
+<p>This is a revised version of <strong><em>donateButtonPressed()</em></strong></p>
 <pre><code>  public void donateButtonPressed (View view)
   {
     int amount = amountPicker.getValue();
@@ -890,7 +890,7 @@ public class Donate extends AppCompatActivity {
         Log.v(&quot;Donate&quot;, &quot;Donate Pressed! with amount &quot; + amount + &quot;, method: &quot; + method);
     }
 }</code></pre>
-<p>So run your app again just to confirm the logCat entries</p>
+<p>So run your app again just to confirm the LogCat entries</p>
 <p><img src="img/lab2s701.png" alt=""></p>
 
   </div>
@@ -909,9 +909,9 @@ public class Donate extends AppCompatActivity {
 </ul>
 <p>First we would need to equip our activity with the ability to remember the donation amounts:</p>
 <pre><code>  private int totalDonated = 0;</code></pre>
-<p>Lets set max progress bar to 10000 in onCreate:</p>
+<p>Lets set max progress bar to 10000 in <strong><em>onCreate()</em></strong>:</p>
 <pre><code>    progressBar.setMax(10000);</code></pre>
-<p>.. and set the progress in donateButtonPressed:</p>
+<p>.. and set the progress in <strong><em>donateButtonPressed()</em></strong>:</p>
 <pre><code>    totalDonated = totalDonated + amount;
     progressBar.setProgress(totalDonated);
 
@@ -1102,7 +1102,7 @@ public class Donate extends AppCompatActivity {
     }
 }</code></pre>
 <p>Examine them carefully. What are the differences? Why make these changes?</p>
-<p>Not also the careful attention to spacing and alignment in the code. Not just correct indentation, but continual attention to structuring each method carefully, removing duplication and unnecessary code and formatting/aligning the declarations and assignment statements in a table like structure:</p>
+<p>Note also the careful attention to spacing and alignment in the code. Not just correct indentation, but continual attention to structuring each method carefully, removing duplication and unnecessary code and formatting/aligning the declarations and assignment statements in a table like structure:</p>
 <p>Visible here:</p>
 <pre><code>  private RadioGroup   paymentMethod;
   private ProgressBar  progressBar;
@@ -1137,7 +1137,7 @@ public class Donate extends AppCompatActivity {
 <p><img src="img/lab2s901.png" alt=""></p>
 <p><img src="img/lab2s903.png" alt=""></p>
 <p>If the number picker is set to zero, then attempt to get a number from the text view.</p>
-<p>Here is a hint (a version of donatButonPressed that does what we want):</p>
+<p>Here is a hint (a version of <strong><em>donatButonPressed()</em></strong> that does what we want):</p>
 <pre><code>  public void donateButtonPressed (View view)
   {
     String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;
@@ -1156,8 +1156,7 @@ public class Donate extends AppCompatActivity {
 <h2>Exercise 2:</h2>
 <p>Revise the app such that when the target is achieved (10000) - then no more donations accepted, and the user is made aware of this.</p>
 <p>Hint - here is how you can display a simple alert:</p>
-<pre><code>      Toast toast = Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT);
-      toast.show();</code></pre>
+<pre><code>      Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT).show();</code></pre>
 <h2>Exercise 3:</h2>
 <p>Modify the colour scheme for our widgets..</p>
 <p>You will notice that the Floating Action Button, the Radio Buttons, the Progress Bar etc, are all a kind of pink - not really in line with our current colour scheme.</p>
