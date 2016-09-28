@@ -7,14 +7,14 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
 
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
       <style>
@@ -36,10 +36,6 @@ figcaption
   align-items: center;
 }
 
-.credits
-{
-  min-height:20px;
-}
 
 
     </style>
@@ -47,9 +43,7 @@ figcaption
   </head>
 
   <body>
-
-    <div class="ui container">
-      
+    
 
 <style>
   
@@ -89,67 +83,99 @@ h3
 
 <div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-      <i class="sitemap icon"></i>
       1: Overview & Tools
     </a>
   </header>
   <div class="right tab-menu menu">
     
-      <a class="item" data-tab="Lab-02">
-        Lab-02
-      </a>
+    <a class="item" data-tab="Lab-02">
+      Lab-02
+    </a>
     
-      <a class="item" data-tab="01">
-        01
-      </a>
+    <a class="item" data-tab="01">
+      01
+    </a>
     
-      <a class="item" data-tab="02">
-        02
-      </a>
+    <a class="item" data-tab="02">
+      02
+    </a>
     
-      <a class="item" data-tab="03">
-        03
-      </a>
+    <a class="item" data-tab="03">
+      03
+    </a>
     
-      <a class="item" data-tab="04">
-        04
-      </a>
+    <a class="item" data-tab="04">
+      04
+    </a>
     
-      <a class="item" data-tab="05">
-        05
-      </a>
+    <a class="item" data-tab="05">
+      05
+    </a>
     
-      <a class="item" data-tab="06">
-        06
-      </a>
+    <a class="item" data-tab="06">
+      06
+    </a>
     
-      <a class="item" data-tab="07">
-        07
-      </a>
+    <a class="item" data-tab="07">
+      07
+    </a>
     
-      <a class="item" data-tab="08">
-        08
-      </a>
+    <a class="item" data-tab="08">
+      08
+    </a>
     
-      <a class="item" data-tab="Exercises">
-        Exercises
-      </a>
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
     
-    </div>
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
 </div>
 
-<br><br>
-
-  
-  <div  class="ui tab segment lab" data-tab="Lab-02">
-    <h1>Objectives</h1>
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-overview-and-tools/book-a-lab-01/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01-overview-and-tools/book-b-lab-02/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-activities-and-layouts/book-a-donation-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-navigation-and-app-structure/book-a-donation-03/index.html">
+          Lab-04
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-02">
+        <h1>Objectives</h1>
 <p>In this Lab, you will be required to build the first version of our Donation Case Study App, called <b>Donation.1.0</b>. Here, we will add in a few UI widgets on a single layout and implement some basic event handling.</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="01">
-    <h1>Step 01 - Create Project</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Step 01 - Create Project</h1>
 <p>Create a new Android application, as demonstrated in the following 5 screenshots:</p>
 <p><img src="img/firstrun.png" alt=""></p>
 <p><img src="img/lab2s101.png" alt=""></p>
@@ -172,10 +198,10 @@ h3
 <p>Also, take a quick look at your <b>build.gradle</b> file to see the configuration and dependencies of your app.</p>
 <p><img src="img/lab2s110.png" alt=""></p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="02">
-    <h1>Step 02 - Donate Layout &amp; Resources</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Step 02 - Donate Layout &amp; Resources</h1>
 <p>On completion of this lab you&#39;ll be able to</p>
 <ul>
 <li><p>design an initial layout for the app.</p>
@@ -284,10 +310,10 @@ h3
     &lt;string name=&quot;donateSubtitle&quot;&gt;Please Give Generously&lt;/string&gt;
 &lt;/resources&gt;</code></pre>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="03">
-    <h1>Step 03 - The &#39;Donate&#39; Button</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Step 03 - The &#39;Donate&#39; Button</h1>
 <p>Place a button directly on to the activity - attached to the bottom of the screen as shown:</p>
 <p><img src="img/lab2s301.png" alt=""></p>
 <p>Following a similar procedure as in the previous step, rename the button and add an id, both called <b>donateButton</b> If all goes as expected, your xml files should be like this:</p>
@@ -482,10 +508,10 @@ public class Donate extends AppCompatActivity {
 <p><img src="img/lab2s306.png" alt=""></p>
 <p>Run the app again, and verify the above message appears.</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="04">
-    <h1>Step 04 - Documentation</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Step 04 - Documentation</h1>
 <p>The android documentation is particularly helpful and well designed. These are the two key starting points:</p>
 <ul>
 <li><a href="http://developer.android.com/guide/components/index.html">http://developer.android.com/guide/components/index.html</a></li>
@@ -520,10 +546,10 @@ public class Donate extends AppCompatActivity {
 <p><img src="img/lab2s401.png" alt=""></p>
 <p>We now have our first interaction working!</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="05">
-    <h1>Step 05 - New Control Layout</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Step 05 - New Control Layout</h1>
 <p>Recall the UI we are trying to implement:</p>
 <p><img src="img/completeappv1.png" alt=""></p>
 <p>We need radio buttons, some sort of selection/combo box + a progress bar. These can be found in various locations in the pallette:</p>
@@ -731,10 +757,10 @@ public class Donate extends AppCompatActivity {
     }
 }</code></pre>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="06">
-    <h1>Step 06 - NumberPicker</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Step 06 - NumberPicker</h1>
 <p>This is our reference documentation:</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/NumberPicker.html">http://developer.android.com/reference/android/widget/NumberPicker.html</a></li>
@@ -770,10 +796,10 @@ public class Donate extends AppCompatActivity {
 <p>Run this now - and verify that it operates as expected (see the actual amounts in the log file, as below).</p>
 <p><img src="img/lab2s601.png" alt=""></p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="07">
-    <h1>Step 07 - The Radio Buttons</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Step 07 - The Radio Buttons</h1>
 <p>In <strong><em>donateButtonPressed()</em></strong> we need to discover which payment method has been selected. Our RadioGroup documentation is here:</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/RadioGroup.html">http://developer.android.com/reference/android/widget/RadioGroup.html</a></li>
@@ -893,10 +919,10 @@ public class Donate extends AppCompatActivity {
 <p>So run your app again just to confirm the LogCat entries</p>
 <p><img src="img/lab2s701.png" alt=""></p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="08">
-    <h1>Step 08 - The Progress Bar</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Step 08 - The Progress Bar</h1>
 <p>The progress bar documentation:</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/ProgressBar.html">http://developer.android.com/reference/android/widget/ProgressBar.html</a></li>
@@ -1118,10 +1144,10 @@ public class Donate extends AppCompatActivity {
     String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;</code></pre>
 <p>Android code can become very verbose and complex. Carefully formatting is essential if you are not to be overwhelmed.</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="Exercises">
-    <h1>Exercises</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
 <p>Archive of lab so far:</p>
 <ul>
 <li><a href="archives/Donation.1.0.zip">Donation.1.0.zip</a></li>
@@ -1167,34 +1193,25 @@ public class Donate extends AppCompatActivity {
 <li><a href="archives/Donation.1.5.zip">Donation.1.5.zip</a></li>
 </ul>
 
-  </div>
- 
-
-
-<script>
-$('.ui.menu .item')
-  .tab({
-    history: true,
-    historyType: 'hash'
-  })
-;
-</script>
-
+      </div>
+     
     </div>
-
-    
-  <br><br>
-  <div class="ui bottom fixed borderless menu">
-    <div class="ui small item">
-    <p id="footertext">
-    Prepared by  David Drohan (ddrohan@wit.ie) & Eamonn de Leastar (edeleastar@tssg.wit.ie). Except where otherwise noted, this content is licensed under a
-     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-     </a>
-     </p>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        David Drohan (ddrohan@wit.ie) & Eamonn de Leastar (edeleastar@tssg.wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
     </div>
   </div>
 
+    <footer>
+
+    </footer>
     <script>
       
 $(document).ready(function()
@@ -1215,9 +1232,21 @@ $(document).ready(function()
   });
 
 
-})
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
 
     </script>
-
   </body>
+
  </html>

@@ -7,14 +7,14 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
 
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
       <style>
@@ -36,10 +36,6 @@ figcaption
   align-items: center;
 }
 
-.credits
-{
-  min-height:20px;
-}
 
 
     </style>
@@ -47,9 +43,7 @@ figcaption
   </head>
 
   <body>
-
-    <div class="ui container">
-      
+    
 
 <style>
   
@@ -89,47 +83,79 @@ h3
 
 <div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-      <i class="sitemap icon"></i>
       1: Overview & Tools
     </a>
   </header>
   <div class="right tab-menu menu">
     
-      <a class="item" data-tab="Lab-01">
-        Lab-01
-      </a>
+    <a class="item" data-tab="Lab-01">
+      Lab-01
+    </a>
     
-      <a class="item" data-tab="01">
-        01
-      </a>
+    <a class="item" data-tab="01">
+      01
+    </a>
     
-      <a class="item" data-tab="02">
-        02
-      </a>
+    <a class="item" data-tab="02">
+      02
+    </a>
     
-      <a class="item" data-tab="03">
-        03
-      </a>
+    <a class="item" data-tab="03">
+      03
+    </a>
     
-      <a class="item" data-tab="04">
-        04
-      </a>
+    <a class="item" data-tab="04">
+      04
+    </a>
     
-    </div>
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
 </div>
 
-<br><br>
-
-  
-  <div  class="ui tab segment lab" data-tab="Lab-01">
-    <h1>Objectives</h1>
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01-overview-and-tools/book-a-lab-01/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-overview-and-tools/book-b-lab-02/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-activities-and-layouts/book-a-donation-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-navigation-and-app-structure/book-a-donation-03/index.html">
+          Lab-04
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01">
+        <h1>Objectives</h1>
 <p>Here we discuss how to install and set up effective tools for Android application development. These include the Android Studio IDE  + an emulator. We&#39;ll also create a simple Android App (HelloWorld), and be able to manage it within the Android Studio environment.</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="01">
-    <h1>Android Studio &amp; SDK Tools</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Android Studio &amp; SDK Tools</h1>
 <h2>Instructions for working in Walton Building PC Labs:</h2>
 <p>If you are working on the workstations in WIT in the IT Building, Android Studio should already be installed so proceed with the next step of the lab.</p>
 <h2>Instructions for working on your own laptop</h2>
@@ -149,10 +175,10 @@ h3
 <p>NOTE : these downloads are quite large so it&#39;s advisable to have these versions installed <b>BEFORE</b> class.</p>
 <p><img src="img/sdk.png" alt="Figure 1: Android SDK"></p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="02">
-    <h1>Your First Android Project - &quot;HelloWorld&quot;</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Your First Android Project - &quot;HelloWorld&quot;</h1>
 <p>In Android Studio, select File-&gt;New-&gt;New Project, or if it&#39;s a first run, select &quot;Start a new Android Studio Project&quot;</p>
 <p><img src="img/firstrun.png" alt="Figure 1: Start a new Android Studio project"></p>
 <p>Press &quot;Next&quot; (or click the option) and then give the project a name: &#39;HelloWorld&#39;</p>
@@ -189,10 +215,10 @@ h3
 <p><b>The Virtual Device is very heavy on resources so you may need to choose settings below what is selected in the Screenshots.</b></p>
 <p>Otherwise, use the settings as above and your first Android App should launch, (Once you&#39;ve unlocked the device!):</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="03">
-    <h1>Our version of &quot;HelloWorld&quot;</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Our version of &quot;HelloWorld&quot;</h1>
 <p>In this Step, you will be required to develop and run your own version of the &quot;Hello World&quot; Android Project (as seen below).</p>
 <p><img src="img/lab01.png" alt="Figure 1: Completed App running in Emulator"></p>
 <p>If you&#39;ve deleted your HelloWorld Project, launch Android Studio (if it&#39;s not already open) and create a new Android Project called <b>HelloWorld</b> similar to what you did in Step 02.</p>
@@ -265,10 +291,10 @@ public class HelloWorldActivity extends AppCompatActivity {
 <p><img src="img/lab04.png" alt="Figure 4: Completed App running in Emulator with Button clicked"></p>
 <p>We will investigate this code more closely in the lectures.</p>
 
-  </div>
- 
-  <div  class="ui tab segment lab" data-tab="04">
-    <h1>Exercises</h1>
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Exercises</h1>
 <p><strong>Working with Resources</strong></p>
 <ul>
 <li>Just to get used to adding and editing resources, create a new button for our main layout, and try and &#39;hook it up&#39; to a new string resource message to display to the user.</li>
@@ -278,34 +304,25 @@ public class HelloWorldActivity extends AppCompatActivity {
 <li>Have a look at adding in a new colour resource and changing the default colour scheme for the layout.  </li>
 </ul>
 
-  </div>
- 
-
-
-<script>
-$('.ui.menu .item')
-  .tab({
-    history: true,
-    historyType: 'hash'
-  })
-;
-</script>
-
+      </div>
+     
     </div>
-
-    
-  <br><br>
-  <div class="ui bottom fixed borderless menu">
-    <div class="ui small item">
-    <p id="footertext">
-    Prepared by  David Drohan (ddrohan@wit.ie) & Eamonn de Leastar (edeleastar@tssg.wit.ie). Except where otherwise noted, this content is licensed under a
-     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-     </a>
-     </p>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        David Drohan (ddrohan@wit.ie) & Eamonn de Leastar (edeleastar@tssg.wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
     </div>
   </div>
 
+    <footer>
+
+    </footer>
     <script>
       
 $(document).ready(function()
@@ -326,9 +343,21 @@ $(document).ready(function()
   });
 
 
-})
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
 
     </script>
-
   </body>
+
  </html>
