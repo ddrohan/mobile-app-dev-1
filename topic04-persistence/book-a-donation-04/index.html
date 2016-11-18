@@ -326,7 +326,7 @@ public class DonationApp extends Application
      
       <div  class="ui tab segment lab" data-tab="06">
         <h1>Base Class Refactoring</h1>
-<p>The Base activity can now be completely refactored to make use of the DonationApp object. You <b>WILL</b> have errors at the end of this step, due to referencing our (as yet missing) database classes - but we&#39;ll fix those in the next few steps. </p>
+<p>The Base activity can now be completely refactored to make use of the DonationApp object. You <b>WILL</b> have errors at the end of this step, due to referencing our (as yet missing) database classes - but we&#39;ll fix those in the next few steps.</p>
 <p>This is our new Base class</p>
 <pre><code class="lang-java">package ie.app.activities;
 
@@ -395,7 +395,6 @@ public class Base extends AppCompatActivity {
             donate.setVisible(true);
             reset.setVisible(false);
         }
-
         return true;
     }
 
@@ -489,7 +488,7 @@ public class Base extends AppCompatActivity {
       <div  class="ui tab segment lab" data-tab="08">
         <h1>Resetting the Donations</h1>
 <p>The last step in this lab involves deleting all the donations in the database when the user wishes to &#39;Reset&#39;.</p>
-<p>There&#39;s actually not a lot required in this step - all you need to do is call <b>reset()</b> on your datbase object when the user selects the Menu option, so modify your reset method (in your Donate.java) as follows:</p>
+<p>There&#39;s actually not a lot required in this step - all you need to do is call <b>reset()</b> on your database object when the user selects the Menu option, so modify your reset method (in your Donate.java) as follows:</p>
 <pre><code class="lang-java">  @Override
   public void reset(MenuItem item)
   {
@@ -498,7 +497,7 @@ public class Base extends AppCompatActivity {
         amountTotal.setText(&quot;$&quot; + app.totalDonated);
   }</code></pre>
 <p>You also need to update your <i>onPrepareOptionsMenu()</i> method in your <b>Base</b> class to handle the &#39;Reset&#39; menu option being disabled/displayed properly, so refer to the lecture material for this.</p>
-<p>That&#39;s about it - with one exception. There&#39;s a small bug in the app related to when the app restarts and the target <b>HAS NOT</b> been reached.</p>
+<p>That&#39;s about it really - with one exception. There&#39;s a small bug in the app related to when the app restarts and the target <b>HAS NOT</b> been reached.</p>
 <p>Can you find it, and more importantly, fix it?</p>
 
       </div>
